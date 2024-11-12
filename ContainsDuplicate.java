@@ -1,7 +1,6 @@
 import java.util.*;
 
-/*  Bruteforce approach
-Time Complexity : O(n^2)    */
+/*  Bruteforce approach - Time Complexity : O(n^2)   */
 class Solution1 {
     public boolean containsDuplicate(int[] nums) {
         int i, j, n = nums.length;
@@ -15,10 +14,7 @@ class Solution1 {
     }
 }
 
-/*
- * optimal approach
- * Time Complexity : O(n)
- */
+/* Better Approach - Time Complexity :O(N) */
 class Solution2 {
     public boolean containsDuplicate(int[] nums) {
         int i, n = nums.length;
@@ -27,6 +23,20 @@ class Solution2 {
             if (nums[i - 1] == nums[i])
                 return true;
         }
+        return false;
+    }
+}
+
+/* optimal Approach - Time Complexity :O(N) */
+class Solution3 {
+    public boolean containsDuplicate(int[] nums) {
+        int i, n = nums.length;
+        HashSet<Integer> set = new HashSet();
+        for (i = 0; i < n; i++) {
+            set.add(nums[i]);
+        }
+        if (set.size() < n)
+            return true;
         return false;
     }
 }
