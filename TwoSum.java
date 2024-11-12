@@ -1,5 +1,7 @@
+import java.util.HashMap;
+
 //Brute Force Approach
-class Solution {
+class Solution1 {
     public int[] twoSum(int[] nums, int target) {
         int i, j;
         int[] arr = new int[2];
@@ -18,7 +20,7 @@ class Solution {
 }
 
 // Optimal approach
-class Solution {
+class Solution2 {
     public int[] twoSum(int[] nums, int target) {
         int i, n = nums.length;
         HashMap<Integer, Integer> map = new HashMap<>();
