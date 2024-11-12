@@ -1,4 +1,4 @@
-import java.util.HashMap;
+import java.util.*;
 
 /*Brute Force Approach
    Time Complexity : O(n^2) */
@@ -20,10 +20,7 @@ class Solution1 {
     }
 }
 
-/*
- * optimal approach
- * Time Complexity : O(n)
- */
+/* Better Approach - Time Complexity : O(NlogN) */
 class Solution2 {
     public int[] twoSum(int[] nums, int target) {
         int i, n = nums.length;
@@ -38,5 +35,19 @@ class Solution2 {
             map.put(nums[i], i);
         }
         return res;
+    }
+}
+
+/* optimal Approach - Time Complexity :O(N) */
+class Solution3 {
+    public boolean containsDuplicate(int[] nums) {
+        int i, n = nums.length;
+        HashSet<Integer> set = new HashSet();
+        for (i = 0; i < n; i++) {
+            set.add(nums[i]);
+        }
+        if (set.size() < n)
+            return true;
+        return false;
     }
 }
