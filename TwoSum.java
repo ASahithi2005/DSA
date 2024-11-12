@@ -1,7 +1,6 @@
 import java.util.*;
 
-/*Brute Force Approach
-   Time Complexity : O(n^2) */
+/*Brute Force Approach - Time Complexity : O(n^2) */
 class Solution1 {
     public int[] twoSum(int[] nums, int target) {
         int i, j;
