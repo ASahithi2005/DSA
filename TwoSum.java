@@ -1,6 +1,7 @@
 import java.util.HashMap;
 
-//Brute Force Approach
+/*Brute Force Approach
+   Time Complexity : O(n^2) */
 class Solution1 {
     public int[] twoSum(int[] nums, int target) {
         int i, j;
@@ -19,7 +20,10 @@ class Solution1 {
     }
 }
 
-// Optimal approach
+/*
+ * optimal approach
+ * Time Complexity : O(n)
+ */
 class Solution2 {
     public int[] twoSum(int[] nums, int target) {
         int i, n = nums.length;
